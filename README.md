@@ -3,7 +3,7 @@
 
 这里首先来看一下UICollectionViewFlowLayout的一种布局情况    
     
-![alt](UICollectionViewFlowLayout.gif)    
+![alt](UICollectionViewFlowLayout.gif=100x100)    
 可以看到这么多空白位置多浪费啊，这也是我想写一个布局的原因之一(浪费可耻啊)
 
 然后在看一个网上写的比较好的布局CHTCollectionViewWaterfallLayout显示情况    
