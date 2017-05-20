@@ -3,6 +3,7 @@
 
 这里首先来看一下UICollectionViewFlowLayout的一种布局情况    
     
+<img src="UICollectionViewFlowLayout.gif" width="100" height="200" alt="UICollectionViewFlowLayout.gif"/>
 ![alt](UICollectionViewFlowLayout.gif=100x100)    
 可以看到这么多空白位置多浪费啊，这也是我想写一个布局的原因之一(浪费可耻啊)
 
