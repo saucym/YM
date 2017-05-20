@@ -4,17 +4,16 @@
 这里首先来看一下UICollectionViewFlowLayout的一种布局情况    
     
 <img src="UICollectionViewFlowLayout.gif" width="100" height="200" alt="UICollectionViewFlowLayout.gif"/>
-![alt](UICollectionViewFlowLayout.gif=100x100)    
 可以看到这么多空白位置多浪费啊，这也是我想写一个布局的原因之一(浪费可耻啊)
 
 然后在看一个网上写的比较好的布局CHTCollectionViewWaterfallLayout显示情况    
-    
-![alt](CHTCollectionViewWaterfallLayout.gif)    
+
+<img src="CHTCollectionViewWaterfallLayout.gif" width="100" height="200" alt="CHTCollectionViewWaterfallLayout.gif"/>
 虽然不浪费空间了，但是有一个致命的问题(宽度都是一样的)，对于一个追求完美的程序员来所这完全是无法容忍的(作者不要打我。我这里只是说不够理想，并不是说这个布局不够好，这个布局是我在GitHub上见过写得最好的了)...    
     
 下面看一个理想中的布局    
-    
-![alt](WYWaterFlowLayout.gif)    
+
+<img src="WYWaterFlowLayout.gif" width="100" height="200" alt="WYWaterFlowLayout.gif"/>
 为了这个理想布局我开始了撸代码。    
 
 这里首先打下草稿定下几点实现思路    
