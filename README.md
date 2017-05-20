@@ -1,12 +1,12 @@
 # WYWaterFlowLayout 像河流一样的布局
-&emsp;做项目的时候遇到一些界面需要的布局非常自由而网上搜了一些开源的代码都没找到一个理想的，于是自己就准备写一种比较理想的布局，一种可以像系统的UICollectionViewFlowLayout一样从左到右的流式布局，又能像CHTCollectionViewWaterfallLayout一样的从上到下瀑布流布局，想到就做(就算不能一步到位也可以慢慢实现直到解决问题)。     
+&emsp;&emsp;做项目的时候遇到一些界面需要的布局非常自由而网上搜了一些开源的代码都没找到一个理想的，于是自己就准备写一种比较理想的布局，一种可以像系统的UICollectionViewFlowLayout一样从左到右的流式布局，又能像CHTCollectionViewWaterfallLayout一样的从上到下瀑布流布局，想到就做(就算不能一步到位也可以慢慢实现直到解决问题)。     
 
-&emsp;这里首先来看一下UICollectionViewFlowLayout的一种布局情况    
+这里首先来看一下UICollectionViewFlowLayout的一种布局情况    
     
 ![alt](UICollectionViewFlowLayout.gif)    
-&emsp;可以看到这么多空白位置多浪费啊，这也是我想写一个布局的原因之一(浪费可耻啊)
+可以看到这么多空白位置多浪费啊，这也是我想写一个布局的原因之一(浪费可耻啊)
 
-&emsp;然后在看一个网上写的比较好的布局CHTCollectionViewWaterfallLayout显示情况    
+然后在看一个网上写的比较好的布局CHTCollectionViewWaterfallLayout显示情况    
     
 ![alt](CHTCollectionViewWaterfallLayout.gif)    
 虽然不浪费空间了，但是有一个致命的问题(宽度都是一样的)，对于一个追求完美的程序员来所这完全是无法容忍的(作者不要打我。我这里只是说不够理想，并不是说这个布局不够好，这个布局是我在GitHub上见过写得最好的了)...    
@@ -39,8 +39,7 @@ UICollectionViewFlowLayout            |   25.087ms          |   0.614ms         
 CHTCollectionViewWaterfallLayout      |   80.257ms          |   0.271ms             |    8.8MB
 WYWaterFlowLayout                     |   160.849ms         |   0.209ms             |    10.3MB
 
-看这个测试数据勉强还能接受，除了布局时间长一点，滑动性能还可以，基本算可以使用了。    
-但是对于一个励志要改变世界的程序员来说必须得追求极限，这里跟CHTCollectionViewWaterfallLayout对比性能相差了将近一倍,性能瓶颈主要在下面这个函数    
+&emsp;看这个测试数据勉强还能接受，除了布局时间长一点，滑动性能还可以，基本算可以使用了。但是对于一个励志要改变世界的程序员来说必须得追求极限，这里跟CHTCollectionViewWaterfallLayout对比性能相差了将近一倍,性能瓶颈主要在下面这个函数    
 ```Objective-C     
 - (CGRect)willAddItemWithSize:(CGSize)size maxWidth:(CGFloat)maxWidth maxTop:(CGFloat *)p_top withSpaces:(NSMutableArray<WYSpaceIndexSet *> *)emptySpaces
 ```
