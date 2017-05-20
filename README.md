@@ -1,5 +1,5 @@
 # WYWaterFlowLayout 像河流一样的布局
-做项目的时候遇到一些界面需要的布局非常自由而网上搜了一些开源的代码都没找到一个理想的，于是自己就准备写一种比较理想的布局，一种可以像系统的UICollectionViewFlowLayout一样从左到右的流式布局，又能像CHTCollectionViewWaterfallLayout一样的从上到下瀑布流布局，想到就做(就算不能一步到位也可以慢慢实现直到解决问题)。     
+    做项目的时候遇到一些界面需要的布局非常自由而网上搜了一些开源的代码都没找到一个理想的，于是自己就准备写一种比较理想的布局，一种可以像系统的UICollectionViewFlowLayout一样从左到右的流式布局，又能像CHTCollectionViewWaterfallLayout一样的从上到下瀑布流布局，想到就做(就算不能一步到位也可以慢慢实现直到解决问题)。     
 
 这里首先来看一下UICollectionViewFlowLayout的一种布局情况    
     
@@ -39,9 +39,9 @@ UICollectionViewFlowLayout            |   25.087            |   0.614           
 CHTCollectionViewWaterfallLayout      |   80.257            |   0.271               |    8.8MB
 WYWaterFlowLayout                     |   160.849           |   0.209               |    10.3MB
 
-看这个测试数据勉强还能接受，除了布局时间长一点，滑动性能还可以(基本算可以使用了)。    
+    看这个测试数据勉强还能接受，除了布局时间长一点，滑动性能还可以，基本算可以使用了。    
 但是对于一个励志要改变世界的程序员来说必须得追求极限，这里跟CHTCollectionViewWaterfallLayout对比性能相差了将近一倍,性能瓶颈主要在下面这个函数    
----
+---Objc
 - (CGRect)willAddItemWithSize:(CGSize)size maxWidth:(CGFloat)maxWidth maxTop:(CGFloat *)p_top withSpaces:(NSMutableArray<WYSpaceIndexSet *> *)emptySpaces
 ---
 这个函数主要是传入一个需要布局的item的size、布局所在的宽度和空白位置记录数据，返回这个item的frame和当前布局到的最大y坐标    
