@@ -20,11 +20,11 @@
 在我撸啊撸的情况下总算撸出来了一个[初版](初版.zip)。为什么叫初版呢? 是因为虽然功能是实现了，但是细节和性能还有待提升！这需要后续持续完善    
 
 下面给出初版的性能测试对比（测试设备:iPhone6，数据量:10万）    
-| function                              |   preparLayout(ms)  |   layoutInRect(ms)    |    内存使用(1条数据的时候4.9MB)    
-| ------------                          |   ---               |   -----------         |
-| UICollectionViewFlowLayout            |   258.518           |   1.100               |    20.9MB
-| CHTCollectionViewWaterfallLayout      |   864.026           |   1.613               |    35.6MB
-| WYWaterFlowLayout                     |   1645.468          |   1.616               |    51.6MB
+| function                              |   preparLayout(ms)  |   layoutInRect(ms)    |    Memory(empyt=4.9MB)    |
+| ------------                          |   ---               |   -----------         |    ----------             |
+| UICollectionViewFlowLayout            |   258.518           |   1.100               |    20.9MB                 |
+| CHTCollectionViewWaterfallLayout      |   864.026           |   1.613               |    35.6MB                 |
+| WYWaterFlowLayout                     |   1645.468          |   1.616               |    51.6MB                 |
 
 当然10万数据有点大  这里给个1万数据的测试
 function                              |   preparLayout(ms)  |   layoutInRect(ms)    |    内存使用             
